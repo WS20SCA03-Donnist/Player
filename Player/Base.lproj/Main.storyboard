@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,56 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EMU-pu-RV8">
+                                <rect key="frame" x="18" y="638" width="378" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="UKD-XR-nfb"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3q8-Gd-eFN" appends="YES" id="qpy-qU-wDd"/>
+                            <outletCollection property="gestureRecognizers" destination="aBt-j4-u30" appends="YES" id="oy4-Ju-GlZ"/>
+                            <outletCollection property="gestureRecognizers" destination="j4J-pe-Vsu" appends="YES" id="hDg-8U-faL"/>
+                            <outletCollection property="gestureRecognizers" destination="5Gd-wT-wSJ" appends="YES" id="eIO-oB-8wM"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="Kfa-Qf-7gd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3q8-Gd-eFN">
+                    <connections>
+                        <action selector="TapToPlay:" destination="BYZ-38-t0r" id="nCK-Cv-6MA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="aBt-j4-u30">
+                    <connections>
+                        <action selector="LongPressStop:" destination="BYZ-38-t0r" id="bnB-fh-uak"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="j4J-pe-Vsu">
+                    <connections>
+                        <action selector="SwipeLeft:" destination="BYZ-38-t0r" id="BvK-fY-HGu"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="5Gd-wT-wSJ">
+                    <connections>
+                        <action selector="SwipeRight:" destination="BYZ-38-t0r" id="KqO-rU-T73"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </scene>
     </scenes>
 </document>

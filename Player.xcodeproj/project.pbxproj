@@ -13,6 +13,9 @@
 		F4EBCD552440F08300811159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4EBCD532440F08300811159 /* Main.storyboard */; };
 		F4EBCD572440F08700811159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4EBCD562440F08700811159 /* Assets.xcassets */; };
 		F4EBCD5A2440F08700811159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4EBCD582440F08700811159 /* LaunchScreen.storyboard */; };
+		F4EBCD632440F12800811159 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EBCD622440F12800811159 /* AVFoundation.framework */; };
+		F4EBCD652440F1B900811159 /* musette.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4EBCD642440F1B900811159 /* musette.mp3 */; };
+		F4EBCD692441092300811159 /* Hypnotize.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4EBCD682441092200811159 /* Hypnotize.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F4EBCD562440F08700811159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4EBCD592440F08700811159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4EBCD5B2440F08700811159 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4EBCD622440F12800811159 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F4EBCD642440F1B900811159 /* musette.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = musette.mp3; path = ../../../../musette.mp3; sourceTree = "<group>"; };
+		F4EBCD682441092200811159 /* Hypnotize.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Hypnotize.mp3; path = ../../../../Hypnotize.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EBCD632440F12800811159 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,7 @@
 			children = (
 				F4EBCD4C2440F08300811159 /* Player */,
 				F4EBCD4B2440F08300811159 /* Products */,
+				F4EBCD612440F12800811159 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +71,18 @@
 				F4EBCD562440F08700811159 /* Assets.xcassets */,
 				F4EBCD582440F08700811159 /* LaunchScreen.storyboard */,
 				F4EBCD5B2440F08700811159 /* Info.plist */,
+				F4EBCD682441092200811159 /* Hypnotize.mp3 */,
+				F4EBCD642440F1B900811159 /* musette.mp3 */,
 			);
 			path = Player;
+			sourceTree = "<group>";
+		};
+		F4EBCD612440F12800811159 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4EBCD622440F12800811159 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +143,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EBCD692441092300811159 /* Hypnotize.mp3 in Resources */,
+				F4EBCD652440F1B900811159 /* musette.mp3 in Resources */,
 				F4EBCD5A2440F08700811159 /* LaunchScreen.storyboard in Resources */,
 				F4EBCD572440F08700811159 /* Assets.xcassets in Resources */,
 				F4EBCD552440F08300811159 /* Main.storyboard in Resources */,
